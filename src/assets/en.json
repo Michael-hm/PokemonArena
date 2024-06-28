@@ -1,0 +1,22 @@
+{
+  "translate": {
+    "title": "Pokemon Arena",
+    "welcome": "Welcome",
+    "defeat": "Defeat",
+    "changeLanguage": "Change language",
+    "chooseOpponent": "Choose Opponent",
+    "light": "Light",
+    "dark": "Dark",
+    "vs": "1vs1",
+    "com": "1vsCom",
+    "attack": "Attack",
+    "fight": "Fight",
+    "run": "Run",
+    "name": "Name",
+    "submit": "Submit",
+    "playerScores":"Player Scores",
+    "playerName":"Player Name",
+    "score":"Score",
+    "room": "room"
+  }
+}

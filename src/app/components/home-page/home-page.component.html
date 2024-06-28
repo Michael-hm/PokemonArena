@@ -1,0 +1,23 @@
+<div class="homePageContainer">
+  <h1 class="title">{{ translations?.translate?.title }}</h1>
+  <br>
+  <h2>{{translations?.translate?.changeLanguage}}</h2>
+  <select class="personalized-select" name="lang" id="lang"  [(ngModel)]="selectedLang" (change)="changeLang()">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+  </select>
+  <br>
+  <h2>{{translations?.translate?.chooseOpponent}}</h2>
+  <div>
+    <button class="option" (click)="goArenaCom()">{{translations?.translate?.com}}</button>
+    <button class="option" (click)="showRoom()"  >{{translations?.translate?.vs}}</button>
+  </div>
+</div>
+
+ @if (!isUserLogged) {
+    <app-login-modal (loginEvent)="logUser()"></app-login-modal>
+ }
+
+ @if (showRoomModal === true) {
+    <app-modal-room></app-modal-room>
+ }

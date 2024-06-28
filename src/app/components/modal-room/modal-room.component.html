@@ -1,0 +1,13 @@
+<div class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <label>
+        {{ translations.room }}
+      </label>
+      <input class="inputText" type="text" #room />
+    </div>
+    <button type="button" class="option" (click)="goArena1vs1(room.value)">
+      {{ translations.submit }}
+    </button>
+  </div>
+</div>

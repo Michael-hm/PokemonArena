@@ -1,0 +1,66 @@
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.menu-action {
+  grid-column: 1 / 2;
+  background-color: goldenrod;
+  color: #fff;
+  padding: 3px;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+}
+
+.menu-text {
+  display: flex;
+  height: 100%;
+  border: 4px solid;
+  border-color: #fff;
+  background-color: #04507f;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.action-button {
+  grid-column: 2 / 2;
+  background-color: #fff;
+  border: 5px solid blueviolet;
+  padding: 10px;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.text-menu-action {
+  text-align: left;
+  margin-right: 80%;
+}
+.textDailogue {
+  color: #fff;
+}
+
+.yb {
+  border: none;
+  background-color: transparent;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.yb:hover {
+  color: red;
+}
+
+.div-action-button {
+  width: 100%;
+}
+p {
+  color: #000;
+}

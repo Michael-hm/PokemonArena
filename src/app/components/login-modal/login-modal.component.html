@@ -1,0 +1,13 @@
+<div class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <label>
+          {{translations.name}}
+      </label>
+      <input class="inputText" type="text" #name>
+    </div>
+      <button type="button" class="option" (click)="logIn(name.value)">
+        {{translations.submit}}
+      </button>
+  </div>
+</div>

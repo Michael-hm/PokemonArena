@@ -1,0 +1,20 @@
+<div class="main" [ngClass]="isYourPokemon ? 'flex-direction-row-reverse' : ''">
+  <div class="pokemon-info-cotainer">
+    <div class="pokemon-info">
+      <div class="pokemon-name-level">
+        <div class="pokemon-name">{{ pokemon.name?.toUpperCase() }}</div>
+        <div class="level">Lv50</div>
+      </div>
+      <div class="pokemon-hp">
+        <div class="text-hp">HP</div>
+        <div></div>
+        <div
+          class="current-hp" [ngStyle]="{ 'width.%': (pokemon.currenHp / (pokemon.hp * 9)) * 800 }"
+        ></div>
+      </div>
+    </div>
+  </div>
+  <div class="pokemon-sprite-container">
+    <img  class="img" [src]="isYourPokemon ? pokemon.sprite_back_default : pokemon.sprite_front_default "alt="" [ngClass]="{'moveLeftAnimation': isEnemyAttacking && !isYourPokemon, 'moveRightAnimation': isAllyAttacking && isYourPokemon}"/>
+  </div>
+</div>

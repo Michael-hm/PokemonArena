@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.homePageContainer{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url(../../../assets/img/pokemons.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100dvh;
+}
+
+label{
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.option{
+  margin: 15px;
+  border-radius: 10px;
+  border:  none;
+  background-image: linear-gradient(to right, #2035b0 0%, #DC2424 100%);
+  color: white;
+}
+
+button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: aqua;
+  color: black;
+}
+.title{
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  background: radial-gradient(circle, rgba(0,0,0,0.8715861344537815) 0%, rgba(0,0,0,0.5158438375350141) 88%, rgba(0,0,0,0) 100%);
+  padding: 0 10px;
+}
+h2{
+  color: white;
+  text-shadow: 2px 0px 12px black;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,0.8715861344537815) 0%, rgba(0,0,0,0.5158438375350141) 88%, rgba(0,0,0,0) 100%);
+  padding: 4px;
+}
+.personalized-select{
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0.452);
+  color: white;
+  border-radius: 10px;
+  padding: 2px;
+  box-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 4px black;
+}

@@ -1,0 +1,21 @@
+<div class="menu">
+  <div class="menu-action">
+    <div class="menu-text">
+      <p class="textDailogue">What will do?</p>
+    </div>
+  </div>
+  @if (!isInFight) {
+  <div class="action-button">
+    <button class="yb" (click)="switchMenu()">{{translations?.translate?.fight}}</button>
+    <button class="yb" (click)="goBack()">{{translations?.translate?.run}}</button>
+  </div>
+  }@else {
+  <div class="action-button">
+    @for (attack of myMoves; track $index) {
+    <button class="yb" (click)="attackEnemy(attack)" (click)="switchMenu()">
+      {{ attack.name }}
+    </button>
+    }
+  </div>
+  }
+</div>

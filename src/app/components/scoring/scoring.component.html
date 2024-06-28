@@ -1,0 +1,19 @@
+<div class="scoring-container">
+  <h2 class="scoring-title">{{translations?.translate?.playerScores}}</h2>
+  <table class="scoring-table">
+    <thead>
+      <tr>
+        <th>{{translations?.translate?.playerName}}</th>
+        <th>{{translations?.translate?.score}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (player of players; track player) {
+        <tr>
+          <td>{{player.userName}}</td>
+          <td>{{player.points}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

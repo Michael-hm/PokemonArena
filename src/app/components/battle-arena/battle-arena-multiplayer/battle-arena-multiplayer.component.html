@@ -1,0 +1,12 @@
+<main>
+  
+  <app-pokemon-info [pokemon]="player2" [isEnemyAttacking]="isEnemyAttacking"></app-pokemon-info>
+  <app-pokemon-info [isYourPokemon]="true" [pokemon]="player1" [isAllyAttacking]="isAllyAttacking"></app-pokemon-info>
+
+
+  <app-battle-menu [myMoves]="player1.selectedMoves" (attackEvent)="computeMove($event)" [isPvp]="true"></app-battle-menu>
+  <app-scoring></app-scoring>
+  @if(showModal){
+      <app-battle-result-modal [result]="result" (resetBattle)="resetBattle()"></app-battle-result-modal>
+  }
+</main>

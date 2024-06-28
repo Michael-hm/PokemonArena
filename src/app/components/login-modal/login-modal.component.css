@@ -1,0 +1,60 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: display 0.3s ease;
+  text-align: center;
+}
+
+.modal-content {
+  background-color: #2b85cf;
+  margin: 15% auto;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.option{
+  border-radius: 10px;
+  border:  none;
+  background-image: linear-gradient(to right, #2035b0 0%, #DC2424 100%);
+  color: white;
+}
+
+button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: aqua;
+  color: black;
+}
+
+.inputText{
+  padding: 5px;
+}
+
+
