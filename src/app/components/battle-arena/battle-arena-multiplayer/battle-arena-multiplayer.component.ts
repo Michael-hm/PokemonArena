@@ -116,10 +116,10 @@ export class BattleArenaMultiplayerComponent implements OnInit {
           : this.player2.currenHp - attack.power * multiplier;
     }
     setTimeout(() => {
-      if (this.player2.currenHp !== 0) {
-      }
-      this.checkBattleStatus();
-      this.isAllyAttacking = false;
+      if (this.player2.currenHp !== 0) { 
+        this.checkBattleStatus();
+        this.isAllyAttacking = false;
+      } 
     }, 1500);
 
     this.playerTurn = false;
