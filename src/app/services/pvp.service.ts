@@ -21,13 +21,13 @@ export class PvpService {
   }
 
   sendAttack( attack: IAttackPokemon): void {
-    this.socket.emit('attack', { room:this.room, attack });
+    this.socket.emit('attack', { room:this.room, attack, player:this.player + '' });
   }
 
-  getAttack(): Observable<string> {
+  getAttack(): Observable<{player: string, attack: IAttackPokemon}> {
     return new Observable(observer => {
-      this.socket.on('attack', (attack: string) => {
-        observer.next(attack);
+      this.socket.on('reciveAttack', (response: {player: string, attack: IAttackPokemon}) => {
+        observer.next(response);
       });
     });
   }

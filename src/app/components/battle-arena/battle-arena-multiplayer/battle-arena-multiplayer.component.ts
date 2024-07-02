@@ -28,6 +28,10 @@ export class BattleArenaMultiplayerComponent implements OnInit {
   public player: 1 | 2;
   result: string = '';
   showModal: boolean = false;
+  player1Attacked: boolean = false;
+  player2Attacked: boolean = false;
+  player1Attack: IAttackPokemon;
+  player2Attack: IAttackPokemon;
   public isAllyAttacking: boolean = false;
   public isEnemyAttacking: boolean = false;
 
@@ -38,7 +42,18 @@ export class BattleArenaMultiplayerComponent implements OnInit {
   ) {}
   async ngOnInit(): Promise<void> {
     this.player = this.pvpService.player;
-    this.pvpService.getAttack().subscribe((attack) => {console.log(attack)});
+    this.pvpService.getAttack().subscribe((response: {player: string, attack: IAttackPokemon}) => {
+      if(response.player === '1'){
+        this.player1Attacked = true;
+        this.player1Attack = response.attack
+      }else if (response.player === '2'){
+        this.player2Attacked = true;
+        this.player2Attack = response.attack
+      }
+      if(this.player1Attacked && this.player2Attacked){
+        //hacer logica
+      }
+    });
     try {
       await this.fetchPokemons();
       this.determineFirstTurn();
@@ -103,18 +118,21 @@ export class BattleArenaMultiplayerComponent implements OnInit {
       this.showModal = true;
     }
   }
+  computeReceivedMove(attack: IAttackPokemon): void {
+    if (attack && attack.power) {
+      const multiplier = this.getDamageMultiplier(attack.type, this.player1.types);
+      this.isEnemyAttacking = true;
+      this.player1.currenHp = Math.max(0, this.player1.currenHp - attack.power * multiplier);
+    }
+  }
   computeMove(attack: IAttackPokemon) {
     if (attack && attack.power) {
       const multiplier = this.getDamageMultiplier(
         attack.type,
         this.player2.types
-      );
+);
       this.isAllyAttacking = true;
-      this.player2.currenHp =
-        this.player2.currenHp - attack.power * multiplier < 0
-          ? 0
-          : this.player2.currenHp - attack.power * multiplier;
-    }
+      this.player2.currenHp = this.player2.currenHp - attack.power * multiplier < 0 ? 0: this.player2.currenHp - attack.power * multiplier;}
     setTimeout(() => {
       if (this.player2.currenHp !== 0) { 
         this.checkBattleStatus();

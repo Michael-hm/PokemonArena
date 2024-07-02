@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SessionService } from '../../services/session.service';
 import { TranslationService } from '../../services/tranlation.service';
 import { Route, Router } from '@angular/router';
 import { PvpService } from '../../services/pvp.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-modal-room',
@@ -11,8 +12,8 @@ import { PvpService } from '../../services/pvp.service';
   templateUrl: './modal-room.component.html',
   styleUrl: './modal-room.component.css'
 })
-export class ModalRoomComponent implements OnInit {
-  subscribeRef: any;
+export class ModalRoomComponent implements OnInit, OnDestroy {
+  subscribeRef: Subscription;
   translations: any = { name: '' };
   constructor(
     private translationService: TranslationService,
@@ -20,6 +21,9 @@ export class ModalRoomComponent implements OnInit {
     private pvpService: PvpService
 
   ) {}
+  ngOnDestroy(): void {
+    this.subscribeRef.unsubscribe();
+  }
   async ngOnInit(): Promise<void> {
     const text = await this.translationService.getText();
     this.translations = text.translate;
