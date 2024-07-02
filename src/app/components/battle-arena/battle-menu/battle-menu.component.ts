@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output, input } from '@angular/core';
 import { IAttackPokemon } from '../../../interfaces/pokeApi.model';
 import { Router } from '@angular/router';
-import { TranslationService } from '../../../shared/tranlation.service'; 
-import { PvpService } from '../../../shared/pvp.service';
+import { TranslationService } from '../../../services/tranlation.service'; 
+import { PvpService } from '../../../services/pvp.service';
 
 @Component({
   selector: 'app-battle-menu',

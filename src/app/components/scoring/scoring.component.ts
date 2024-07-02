@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from '../../interfaces/user.model';
-import { SessionService } from '../../shared/session.service';
-import { TranslationService } from '../../shared/tranlation.service';
+import { SessionService } from '../../services/session.service';
+import { TranslationService } from '../../services/tranlation.service';
 
 
 @Component({

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { SessionService } from '../../shared/session.service';
+import { SessionService } from '../../services/session.service';
 import { LoginModalComponent } from '../login-modal/login-modal.component';
-import { TranslationService } from '../../shared/tranlation.service';
+import { TranslationService } from '../../services/tranlation.service';
 import { ModalRoomComponent } from '../modal-room/modal-room.component';
 
 

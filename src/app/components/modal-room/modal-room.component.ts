@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SessionService } from '../../shared/session.service';
-import { TranslationService } from '../../shared/tranlation.service';
+import { SessionService } from '../../services/session.service';
+import { TranslationService } from '../../services/tranlation.service';
 import { Route, Router } from '@angular/router';
-import { PvpService } from '../../shared/pvp.service';
+import { PvpService } from '../../services/pvp.service';
 
 @Component({
   selector: 'app-modal-room',

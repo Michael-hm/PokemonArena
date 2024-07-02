@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PvpService } from '../../../shared/pvp.service';
-import { PokemonService } from '../../../shared/pokemon.service';
+import { PvpService } from '../../../services/pvp.service';
+import { PokemonService } from '../../../services/pokemon.service';
 import { IAttackPokemon, IPokemon } from '../../../interfaces/pokeApi.model';
-import { SessionService } from '../../../shared/session.service';
+import { SessionService } from '../../../services/session.service';
 import { typeEffectiveness } from '../typeEffectiveness';
 import { BattleMenuComponent } from '../battle-menu/battle-menu.component';
 import { ScoringComponent } from '../../scoring/scoring.component';

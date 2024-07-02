@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonInfoComponent } from './pokemon-info/pokemon-info.component';
 import { BattleMenuComponent } from './battle-menu/battle-menu.component';
-import { PokemonService } from '../../shared/pokemon.service';
+import { PokemonService } from '../../services/pokemon.service';
 import { IAttackPokemon, IPokemon } from '../../interfaces/pokeApi.model';
 import { BattleResultModalComponent } from './battle-result-modal/battle-result-modal.component';
 import { Router } from '@angular/router';
 import { ScoringComponent } from '../scoring/scoring.component';
 import { typeEffectiveness } from './typeEffectiveness';
-import { SessionService } from '../../shared/session.service';
+import { SessionService } from '../../services/session.service';
 
 @Component({
   selector: 'app-battle-arena',

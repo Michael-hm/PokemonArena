@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { SessionService } from '../../shared/session.service';
-import { TranslationService } from '../../shared/tranlation.service';
+import { SessionService } from '../../services/session.service';
+import { TranslationService } from '../../services/tranlation.service';
 
 @Component({
   selector: 'app-login-modal',
