@@ -17,7 +17,7 @@ Este proyecto permite a dos jugadores conectarse a una sala de batalla y luchar 
 
 1. Clona el repositorio:
 
-   - git clone https://github.com/tu_usuario/pokemon-arena.git
+   - git clone https://github.com/Michael-hm
 
 
 2. Instala las dependencias del front:
