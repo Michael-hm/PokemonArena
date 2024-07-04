@@ -20,13 +20,16 @@ Este proyecto permite a dos jugadores conectarse a una sala de batalla y luchar 
    - git clone https://github.com/Michael-hm/PokemonArena.git
 
 
+
 2. Instala las dependencias del front:
  
    - npm install
   
+
 3. Instala las dependencias del backend:
- 
+
    - npm install
+
 
 4. Inicia el servidor backend:
    
@@ -38,4 +41,9 @@ Este proyecto permite a dos jugadores conectarse a una sala de batalla y luchar 
    - ng serve
  
 
-6. Abre tu navegador y navega a `http://localhost:4200`.
+6. Abre tu navegador y navega a `http://localhost:4200`(por el momento).
+
+
+## Futuros 
+
+Despliegue de la aplicación para poder jugar contra otros dispositivos
